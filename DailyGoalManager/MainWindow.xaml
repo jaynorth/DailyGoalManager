@@ -19,6 +19,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <TextBlock Text="{Binding Header, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"></TextBlock>
         
@@ -34,7 +35,19 @@
         <TextBox Width="auto" VerticalAlignment="Center"  Height="auto" Text="{Binding Time, Mode=TwoWay}" Grid.Row="2" Grid.Column="3" Margin="5"></TextBox>
     
         <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">GO</Button>
-        <ListView DataContext="{Binding TaskList}" Grid.Row="5" Grid.ColumnSpan="4"></ListView>
-        
+        <ListView Name="ListView" ItemsSource="{Binding TaskList, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="4" >
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}"
+                                Header="Id"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding TaskTitle}"
+                                Header="Task"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+       
+
     </Grid>
 </Window>
