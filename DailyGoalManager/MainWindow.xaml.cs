@@ -33,7 +33,7 @@ namespace DailyGoalManager
             new Task { Time = 5, TaskTitle = "Laundry", Id = 4 },
             new Task { Time = 7, TaskTitle = "Homework", Id = 6 },
             };
-            DataContext = TaskList[2];
+            DataContext = TaskList.FirstOrDefault();
         }
     }
 }

@@ -34,6 +34,7 @@
         <TextBox Width="auto" VerticalAlignment="Center"  Height="auto" Text="{Binding Time, Mode=TwoWay}" Grid.Row="2" Grid.Column="3" Margin="5"></TextBox>
     
         <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">GO</Button>
+        <ListView DataContext="{Binding TaskList}" Grid.Row="5" Grid.ColumnSpan="4"></ListView>
         
     </Grid>
 </Window>
