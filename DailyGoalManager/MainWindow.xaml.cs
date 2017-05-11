@@ -20,21 +20,24 @@ namespace DailyGoalManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Task> TaskList = new List<Task>
+        
+        public MainWindow()
+        {
+            InitializeComponent();
+            List<Task> TaskList = new List<Task>
             {
             new Task { Time = 4, TaskTitle = "Wash Dishes", Id = 2 },
             new Task { Time = 5, TaskTitle = "Laundry", Id = 4 },
             new Task { Time = 7, TaskTitle = "Homework", Id = 6 },
             };
 
-        public MainWindow()
-        {
-            InitializeComponent();
 
             //Task t = new Task { Time = 4, TaskTitle = "Wash Dishes", Id = 2 };
-       
             DataContext = TaskList;
+            
             ListView.ItemsSource = TaskList;
+            ListView.SelectedItem = TaskList.FirstOrDefault();
+            
         }
     }
 }
