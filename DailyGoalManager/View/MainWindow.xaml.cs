@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyGoalManager.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,19 +25,16 @@ namespace DailyGoalManager
         public MainWindow()
         {
             InitializeComponent();
-            List<Task> TaskList = new List<Task>
-            {
-            new Task { Time = 4, TaskTitle = "Wash Dishes", Id = 2 },
-            new Task { Time = 5, TaskTitle = "Laundry", Id = 4 },
-            new Task { Time = 7, TaskTitle = "Homework", Id = 6 },
-            };
+         
 
-
-            //Task t = new Task { Time = 4, TaskTitle = "Wash Dishes", Id = 2 };
-            DataContext = TaskList;
             
-            ListView.ItemsSource = TaskList;
-            ListView.SelectedItem = TaskList.FirstOrDefault();
+            
+            TaskViewModel t = new TaskViewModel();
+            
+            DataContext = t;
+            
+            ListView.ItemsSource = t.TaskList;
+            ListView.SelectedItem = t.TaskList[1];
             
         }
     }
