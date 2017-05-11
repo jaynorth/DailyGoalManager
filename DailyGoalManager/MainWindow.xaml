@@ -43,6 +43,8 @@
                                 Header="Id"/>
                     <GridViewColumn DisplayMemberBinding="{Binding TaskTitle}"
                                 Header="Task"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Time}"
+                                Header="Time"/>
                 </GridView>
             </ListView.View>
         </ListView>
