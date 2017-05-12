@@ -16,32 +16,13 @@ namespace DailyGoalManager.ViewModel
         public List<Task> TaskList
         {
             get { return _taskList; }
-            set { _taskList = value; }
-        }
-
-
-
-
-        private String _taskTitle;
-        
-
-
-        public string TaskTitle
-        {
-            get { return _taskTitle; }
-            set
-            {
-                if (_taskTitle != value)
-                {
-                    _taskTitle = value;
-                    OnPropertyChanged("Header");
-                    OnPropertyChanged();
-                }
-
+            set { _taskList = value;
+                OnPropertyChanged();
             }
         }
 
-       
+
+     
 
         public TaskViewModel()
         {
