@@ -23,7 +23,7 @@ namespace DailyGoalManager.ViewModel
 
 
         private String _taskTitle;
-        private string _header;
+        
 
 
         public string TaskTitle
@@ -41,22 +41,7 @@ namespace DailyGoalManager.ViewModel
             }
         }
 
-        public string Header
-        {
-            get { return _header = _taskTitle; }
-            set
-            {
-
-                if (_header != value)
-                {
-                    _header = value;
-                    OnPropertyChanged();
-                }
-
-
-
-            }
-        }
+       
 
         public TaskViewModel()
         {

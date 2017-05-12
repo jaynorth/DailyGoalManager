@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Task_AddOn.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="Model\Task.cs" />
     <Page Include="View\MainWindow.xaml">

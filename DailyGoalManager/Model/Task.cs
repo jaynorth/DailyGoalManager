@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DailyGoalManager 
 {
-    public class Task 
+    public partial class Task 
     {
         public int Time { get; set; }
         public String TaskTitle { get; set; }
