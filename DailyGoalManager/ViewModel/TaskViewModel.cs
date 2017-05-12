@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,9 @@ namespace DailyGoalManager.ViewModel
 
 
 
-        private List<Task> _taskList;
+        private ObservableCollection<Task> _taskList;
 
-        public List<Task> TaskList
+        public ObservableCollection<Task> TaskList
         {
             get { return _taskList; }
             set { _taskList = value;
@@ -27,14 +28,15 @@ namespace DailyGoalManager.ViewModel
         public TaskViewModel()
         {
 
-            List<Task> tl = new List<Task>
+            ObservableCollection<Task> tl = new ObservableCollection<Task>
             {
-            new Task { Time = 4, TaskTitle = "Wash Dishes", Id = 2 },
-            new Task { Time = 5, TaskTitle = "Laundry", Id = 4 },
-            new Task { Time = 7, TaskTitle = "Homework", Id = 6 },
+            new Task { Time = 4, TaskTitle = "Wash Dishes", Name = "2" },
+            new Task { Time = 5, TaskTitle = "Laundry", Name = "4" },
+            new Task { Time = 7, TaskTitle = "Homework", Name = "6" },
             };
 
             this.TaskList = tl;
+    
             
         }
     }

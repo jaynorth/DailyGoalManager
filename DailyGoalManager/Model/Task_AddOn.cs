@@ -8,22 +8,8 @@ namespace DailyGoalManager
 {
     public partial class Task
     {
-        private string _header;
-        public string Header
-        {
-            get { return _header = TaskTitle; }
-            set
-            {
-
-                if (_header != value)
-                {
-                    _header = value;
-                    //OnPropertyChanged();
-                }
+        
 
 
-
-            }
-        }
     }
 }
