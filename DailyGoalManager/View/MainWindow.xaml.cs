@@ -25,16 +25,16 @@ namespace DailyGoalManager
         public MainWindow()
         {
             InitializeComponent();
-         
 
+
+
+
+            //TaskViewModel t = new TaskViewModel();
+
+            DataContext = new TaskViewModel();
             
-            
-            TaskViewModel t = new TaskViewModel();
-            
-            DataContext = t;
-            
-            ListView.ItemsSource = t.TaskList;
-            ListView.SelectedItem = t.TaskList[1];
+           // ListView.ItemsSource = t.TaskList;
+          //  ListView.SelectedItem = t.TaskList[1];
             
         }
     }

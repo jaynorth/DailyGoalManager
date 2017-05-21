@@ -19,7 +19,15 @@ namespace DailyGoalManager
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
+
+
+        public BaseViewModel()
+        {
+       
+        }
     }
+
+ 
 
 
 }

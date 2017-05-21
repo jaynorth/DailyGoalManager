@@ -12,7 +12,7 @@ namespace DailyGoalManager
         public int Time { get; set; }
         public String TaskTitle { get; set; }
         
-        public string Name { get; set; }
+        public int Id { get; set; }
 
        
 
